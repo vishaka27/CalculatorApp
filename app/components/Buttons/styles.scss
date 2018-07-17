@@ -1,0 +1,27 @@
+$border-color: #000;
+
+.calculator__keys {
+    padding: 20px;
+
+    .key--operator {
+        text-decoration: none;
+        color: $border-color;
+        padding: 20px;
+        border: 1px solid $border-color;
+
+        &.operator,
+        &.num{
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+
+            :nth-child(5n):after {
+                content: ' ';
+                display: block;
+            }
+        }
+    }
+}
