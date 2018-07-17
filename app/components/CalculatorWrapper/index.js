@@ -23,6 +23,7 @@ class CalculatorWrapper extends Component {
 
 		const { userInput, invalidExpression, result } = this.state;
 		let resultArr = [];
+
 		userInput.forEach((item, index) => {
 			if ((userInput[index].id === 'operator') && (userInput[index+1] !== null) && (userInput[index+1] && userInput[index+1].id === 'operator' )) {
 				resultArr.length = 0;
@@ -32,10 +33,11 @@ class CalculatorWrapper extends Component {
 			}
 		});
 		userInput.length = 0;
-		if (result !== '') {
+		let res = result.length;
+		if (result) {
 			resultArr.unshift(result);
 		}
-		if (invalidExpression === false) {
+		if (!this.state.invalidExpression) {
 			this.setState({ result: eval(resultArr.join('').toString()) });
 		}
 	}
@@ -72,7 +74,7 @@ class CalculatorWrapper extends Component {
 								{buttonId: 'operator', symbol: '+', class: 'operator'},
 								{buttonId: 'operator', symbol: '-', class: 'operator'},
 								{buttonId: 'operator', symbol: '*', class: 'operator'},
-								{buttonId: 'operator', symbol: '÷', class: 'operator'},
+								{buttonId: 'operator', symbol: '/', class: 'operator'},
 								{symbol: '7', class: 'num'},
 								{symbol: '8', class: 'num'},
 								{symbol: '9', class: 'num'},

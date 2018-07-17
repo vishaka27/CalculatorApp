@@ -1,16 +1,17 @@
+$calculatorKey: #20b2aa52;
+$errorMessage: #ff0000;
+
 .calculator__display {
-    padding-bottom: 20px;
     border: 1px solid black;
     height: 60px;
-    text-align: center;
-    width: 1200px;
-    margin-left: 20px;
+    background-color: $calculatorKey;
+    padding: 10px 0 0 10px;
 
     &.invalid-expression {
-        color: red;
+        color: $errorMessage;
     }
 
     span {
-        padding: 2px;
+        padding: 0 2px;
     }
 }

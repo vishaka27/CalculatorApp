@@ -12,10 +12,10 @@ class CalculatorDisplay extends Component {
 			<div
 				className={classnames("calculator__display", `${invalidClassName}`)}
             >
-                {result && (
+                {(!invalidExpression && result) && (
                     <span>{result}</span>
                 )}
-				{children && children.map((item, index) => {
+				{(!invalidExpression) && children && children.map((item, index) => {
                     return (
                         <span key={index}>{item.input}</span>
                     )

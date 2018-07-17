@@ -33,7 +33,6 @@ class Buttons extends Component {
 								key = {index + uniqueKey}
 								data-action={item.buttonId ? item.buttonId : ''}
 								onClick={(event) => this.onClick(event)}
-								href="JavaScript:void(0);"
 							>
 								{item.symbol}
 							</a>

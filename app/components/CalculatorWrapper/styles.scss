@@ -1,4 +1,27 @@
+$calculatorForm: #80808038;
+
 .calculator-wrapper {
     margin: 0 auto;
     padding-top: 20px;
+    width: 20%;
+    font-weight: bold;
+
+    @media only screen 
+        and (min-device-width: 768px) 
+        and (max-device-width: 1024px) 
+        and (-webkit-min-device-pixel-ratio: 1) {
+        width: 50%; 
+    }
+
+    @media only screen 
+        and (min-device-width: 320px) 
+        and (max-device-width: 480px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+        padding: 20px;
+        width: 100%;      
+    }
+
+    form {
+        background-color: $calculatorForm;
+    }
 }
