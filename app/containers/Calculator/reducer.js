@@ -6,8 +6,11 @@
 
 import { fromJS } from 'immutable';
 import { DEFAULT_ACTION } from './constants';
+import configJSON from './configJSON';
 
-export const initialState = fromJS({});
+export const initialState = fromJS({
+  configJSON: configJSON
+});
 
 function calculatorReducer(state = initialState, action) {
   switch (action.type) {

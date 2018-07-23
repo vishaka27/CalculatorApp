@@ -21,7 +21,7 @@ import saga from './saga';
 /* eslint-disable react/prefer-stateless-function */
 export class Calculator extends React.PureComponent {
   render() {
-    return <CalculatorWrapper />;
+    return <CalculatorWrapper configJSON={this.props.calculator} />;
   }
 }
 

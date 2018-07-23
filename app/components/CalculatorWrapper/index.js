@@ -57,7 +57,7 @@ class CalculatorWrapper extends Component {
 	}
 
 	render() {
-		const { theme } = this.props;
+		const { configJSON } = this.props;
 		const { userInput, invalidExpression, result } = this.state;
 		return (
 			<div className='calculator-wrapper'>
@@ -68,26 +68,8 @@ class CalculatorWrapper extends Component {
 				/>
 			<form name="calculator">
 				<Buttons
-					label={
-							[
-								{buttonId: 'clear', symbol: 'AC', class: 'operator'},
-								{buttonId: 'operator', symbol: '+', class: 'operator'},
-								{buttonId: 'operator', symbol: '-', class: 'operator'},
-								{buttonId: 'operator', symbol: '*', class: 'operator'},
-								{buttonId: 'operator', symbol: '/', class: 'operator'},
-								{symbol: '7', class: 'num'},
-								{symbol: '8', class: 'num'},
-								{symbol: '9', class: 'num'},
-								{symbol: '4', class: 'num'},
-								{symbol: '5', class: 'num'},
-								{symbol: '6', class: 'num'},
-								{symbol: '1', class: 'num'},
-								{symbol: '2', class: 'num'},
-								{symbol: '3', class: 'num'},
-								{symbol: '0', class: 'num'},
-								{symbol: '.', class: 'num'}
-							]}
-							onClick={this.clickOperators}
+					label={configJSON.configJSON}
+					onClick={this.clickOperators}
 				/>
 				<Buttons label={[{buttonId: 'submit', symbol: '=', class: 'submit-button'}]} onClick={this.clickSubmit} />
 			</form>
